@@ -8,20 +8,23 @@ const userSchema = new Schema(
       required: true,
       trim: true
     },
+
     email: {
       type: String,
       required: true
     },
+
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'thought',
+        ref: 'Thought',
       },
     ],
+
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'user',
+        ref: 'User',
       },
     ],
   },
