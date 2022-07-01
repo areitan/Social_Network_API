@@ -33,10 +33,11 @@ In order to use this application, you could clone the repo and run it in the ter
 
 In order to use this application: 
 
-1. Clone the repo. 
+1. Clone the repo.
 2. In the terminal run```npm start``` to start the server.
+3. Routes must be run in Insomnia, since there is no front end for this project.
 
-### Install Schema
+### Start the Server
 ![https://github.com/areitan/Social_Network_API Install Schema](/assets/1_schema.png)
 
 
@@ -44,7 +45,7 @@ In order to use this application:
 ---
 ## Tests
 
-The GET, PUT, POST and DELETE routes were tested for Categories, Products, and Tags using Insomnia. (Please watch walk-through video above to see all tests run.
+The GET, PUT, POST and DELETE routes were tested using Insomnia. (Please watch walk-through video above to see all tests run.
 
 ### Social Network API Mock-ups Provided
 ![Social Network API Mock-up 1](/assets/18-nosql-homework-demo-01.gif)
@@ -61,17 +62,15 @@ In order to create this application, I used the skills I have at the moment. I a
 ---
 ## Credits
 
-- [MySQL2](https://www.npmjs.com/package/mysql2)
-- [Sequelize](https://www.npmjs.com/package/sequelize)
-- [Express.js](https://www.npmjs.com/package/express)
-- [dotenv](https://www.npmjs.com/package/dotenv) package.
-- Trilogy Education Services, LLC for the starter code, example code throughout the week 13 exercises, and example mock-up.
+- [Mongoose](https://mongoosejs.com/docs/guide.html)
+
+- Trilogy Education Services, LLC for the example code throughout the week 18 exercises, and the example mock-up.
 - Chris Baird, my tutor
 
 
 ### Questions
 
-For any question, please contact me on GitHub at: [areitan](https://github.com/areitan) or by email at <areitan@fredhutch.org>.
+For any questions, please contact me on GitHub at: [areitan](https://github.com/areitan) or by email at <areitan@fredhutch.org>.
 
 ---
 
