@@ -52,7 +52,7 @@ module.exports = {
     console.log(req.body);
     Student.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $addToSet: { reactions: req.body } },
+      { $addToSet: { reactionId: req.params.reactionId } },
       { runValidators: true, new: true }
     )
       .then((thought) =>
