@@ -5,7 +5,7 @@
 ---
 ## Description
 
-This is a Social Network API built from starter code. It uses [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), and the [dotenv](https://www.npmjs.com/package/dotenv) package.
+This is a Social Network API built from starter code. It uses [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/), and [Express.js](https://www.npmjs.com/package/express).
   
 
 ---
@@ -34,10 +34,7 @@ In order to use this application, you could clone the repo and run it in the ter
 In order to use this application: 
 
 1. Clone the repo. 
-2. In MySQL, run ```source db/schema.sql```
-3. Exit MySQL once the schema has successfully been sources.
-4. Run ```npm run seed``` to bring in the seed data.
-4. In the terminal run```node server.js``` to start the server.
+2. In the terminal run```npm start``` to start the server.
 
 ### Install Schema
 ![https://github.com/areitan/Social_Network_API Install Schema](/assets/1_schema.png)
