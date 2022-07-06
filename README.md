@@ -35,7 +35,7 @@ In order to use this application:
 
 1. Clone the repo.
 2. In the terminal run```npm start``` to start the server.
-3. Routes must be run in Insomnia, since there is no front end for this project.
+3. Routes are run in Insomnia, since there is no front end for this project.
 
 ### Start the Server
 ![https://github.com/areitan/Social_Network_API Install Schema](/assets/1_schema.png)
