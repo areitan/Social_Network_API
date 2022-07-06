@@ -20,7 +20,7 @@ router
   .delete(deleteThought);
 
 // /api/thoughts/:thoughtId/reactions/:reactionId
-router.route('/thoughts/:thoughtId/reactions/:reactionId').delete(removeReaction).post(addReaction);
+router.route('/:thoughtId/reactions/:reactionId').delete(removeReaction).post(addReaction);
 
 module.exports = router;
 
