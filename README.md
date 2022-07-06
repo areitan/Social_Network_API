@@ -63,7 +63,6 @@ In order to create this application, I used the skills I have at the moment. I a
 ## Credits
 
 - [Mongoose](https://mongoosejs.com/docs/guide.html)
-
 - Trilogy Education Services, LLC for the example code throughout the week 18 exercises, and the example mock-up.
 - Chris Baird, my tutor
 
