@@ -25,7 +25,7 @@ This is a Social Network API built from starter code. It uses [MongoDB](https://
 In order to use this application, you could clone the repo and run it in the terminal using ```node server.js```. 
 
 - [Social Network API Git Hub Repository](https://github.com/areitan/Social_Network_API)
-- [Social Network API Walkthrough Video Link]()
+- [Social Network API Walkthrough Video Link](https://drive.google.com/file/d/1aW2gwtq_eLzzrOmhbN8gvWELqOSQoagU/view)
 
 
 ---
@@ -36,10 +36,6 @@ In order to use this application:
 1. Clone the repo.
 2. In the terminal run```npm start``` to start the server.
 3. Routes are run in Insomnia, since there is no front end for this project.
-
-### Start the Server
-![https://github.com/areitan/Social_Network_API Install Schema](/assets/1_schema.png)
-
 
 
 ---
