@@ -21,13 +21,13 @@ module.exports = {
       .then((dbThoughtData) => res.json(dbThoughtData))
       .catch((err) => res.status(500).json(err));
   },
-  // Delete a thought and associated apps
+  // Delete a thought and associated reactions
   deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
-          : Application.deleteMany({ _id: { $in: thought.applications } })
+          : Application.deleteMany({ _id: { $in: thought.reactions } })
       )
       .then(() => res.json({ message: 'Thought deleted!' }))
       .catch((err) => res.status(500).json(err));
@@ -48,8 +48,6 @@ module.exports = {
   },
   // Add an reaction to a thought
   addReaction({ params, body }, res) {
-    console.log('You are adding a reaction');
-    console.log(params.thoughtId);
     Thought.findOneAndUpdate(
       { _id: params.thoughtId },
       { $addToSet: { reactions: body } },

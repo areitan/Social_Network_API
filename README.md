@@ -5,7 +5,7 @@
 ---
 ## Description
 
-This is a Social Network API built from starter code. It uses [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/), and [Express.js](https://www.npmjs.com/package/express).
+This is a Social Network API built from starter code. It uses [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/), [Moment.js](https://www.npmjs.com/package/moment), and [Express.js](https://www.npmjs.com/package/express).
   
 
 ---
