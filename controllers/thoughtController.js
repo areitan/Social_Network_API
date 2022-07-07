@@ -68,21 +68,21 @@ module.exports = {
   },
   // Remove reaction from a thought
   removeReaction({ params, body }, res) {
-  Thought.findOneAndUpdate(
-    { _id: params.thoughtId },
-    { $pull: { reactions: { reactionId: params.reactionId } } },
-    { runValidators: true, new: true }
-  )
-    .then(thought => {
-      if (!thought) {
-        res
-          .status(404)
-          .json({ message: 'No thought found with that ID :(' })
-        return;
-      }
-      res.json(thought)
-    })
-    .catch((err) => res.status(500).json(err));
-},
+    Thought.findOneAndUpdate(
+      { _id: params.thoughtId },
+      { $pull: { reactions: { reactionId: params.reactionId } } },
+      { runValidators: true, new: true }
+    )
+      .then(thought => {
+        if (!thought) {
+          res
+            .status(404)
+            .json({ message: 'No thought found with that ID :(' })
+          return;
+        }
+        res.json(thought)
+      })
+      .catch((err) => res.status(500).json(err));
+  },
 };
 
