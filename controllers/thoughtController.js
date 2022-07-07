@@ -46,39 +46,43 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
-   // Add an reaction to a thought
-  addReaction(req, res) {
+  // Add an reaction to a thought
+  addReaction({ params, body }, res) {
     console.log('You are adding a reaction');
-    console.log(req.body);
+    console.log(params.thoughtId);
     Thought.findOneAndUpdate(
-      { _id: req.params.thoughtId },
-      { $addToSet: { reactions: req.params.reactionId } },
+      { _id: params.thoughtId },
+      { $addToSet: { reactions: body } },
       { runValidators: true, new: true }
     )
-      .then((thought) =>
-        !thought
-          ? res
-              .status(404)
-              .json({ message: 'No thought found with that ID :(' })
-          : res.json(thought)
-      )
+      .then(thought => {
+        if (!thought) {
+          res
+            .status(404)
+            .json({ message: 'No thought found with that ID :(' })
+          return;
+        }
+        res.json(thought)
+      })
       .catch((err) => res.status(500).json(err));
   },
   // Remove reaction from a thought
-  removeReaction(req, res) {
-    Thought.findOneAndUpdate(
-      { _id: req.params.thoughtId },
-      { $pull: { reaction: { reactionId: req.params.reactionId } } },
-      { runValidators: true, new: true }
-    )
-      .then((thought) =>
-        !thought
-          ? res
-              .status(404)
-              .json({ message: 'No thought found with that ID :(' })
-          : res.json(thought)
-      )
-      .catch((err) => res.status(500).json(err));
-  },
+  removeReaction({ params, body }, res) {
+  Thought.findOneAndUpdate(
+    { _id: params.thoughtId },
+    { $pull: { reactions: { reactionId: body.reactionId } } },
+    { runValidators: true, new: true }
+  )
+    .then(thought => {
+      if (!thought) {
+        res
+          .status(404)
+          .json({ message: 'No thought found with that ID :(' })
+        return;
+      }
+      res.json(thought)
+    })
+    .catch((err) => res.status(500).json(err));
+},
 };
 
