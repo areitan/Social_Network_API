@@ -70,7 +70,7 @@ module.exports = {
   removeReaction({ params, body }, res) {
   Thought.findOneAndUpdate(
     { _id: params.thoughtId },
-    { $pull: { reactions: { reactionId: body.reactionId } } },
+    { $pull: { reactions: { reactionId: params.reactionId } } },
     { runValidators: true, new: true }
   )
     .then(thought => {
